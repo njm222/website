@@ -31,7 +31,7 @@ function LibCard({ name, desc, url }) {
         height: 200px;
         box-shadow: -15px -15px 25px rgba(255, 255, 255, 0.5), 15px 15px 25px rgba(204, 204, 204, 0.5);
       `}
-      href={`https://github.com/poimandres/${name}`}>
+      href={`https://github.com/pmndrs/${name}`}>
       <h3 className="font-bold text-lg mb-2">{name}</h3>
       <p className="text-gray leading-7">{desc}</p>
     </a>
