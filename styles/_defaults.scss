@@ -17,26 +17,24 @@ body {
   scroll-behavior: smooth;
 }
 
-/**
- * Disable smooth scrolling when users have prefers-reduced-motion enabled
- */
+// disable smooth scrolling when users have "prefers-reduced-motion" enabled
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+// hide scrollbar
 html::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 html {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
+// normalize
 * {
   box-sizing: border-box;
 }
