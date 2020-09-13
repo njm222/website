@@ -18,7 +18,12 @@ function LibCard() {
 
 function Libs() {
   return (
-    <div className="outer-container whitespace-no-wrap">
+    <div
+      className="outer-container whitespace-no-wrap"
+      css={`
+        margin-top: 100px;
+        margin-bottom: 100px;
+      `}>
       <div
         className="overflow-x-hidden py-8"
         css={`
