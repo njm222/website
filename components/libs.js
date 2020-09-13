@@ -19,14 +19,19 @@ function LibCard() {
 function Libs() {
   return (
     <div
-      className="outer-container whitespace-no-wrap"
+      className="whitespace-no-wrap overflow-hidden"
       css={`
         margin-top: 100px;
         margin-bottom: 100px;
       `}>
       <div
-        className="overflow-x-hidden py-8"
+        className="overflow-x-scroll py-8 pb-16"
         css={`
+          padding-left: 20vw;
+          padding-right: 20vw;
+          margin-bottom: -2rem;
+          -webkit-scrolling: touch;
+
           * {
             white-space: normal;
           }
