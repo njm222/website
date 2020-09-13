@@ -33,11 +33,11 @@ function Hero() {
     to: async (animate) => {
       const circles = svgIconRef.current.querySelectorAll('circle');
 
-      circles[0].classList.add('text-white');
+      circles[0].classList.add('text-c000');
 
       await wait(800);
 
-      circles[1].classList.add('text-white');
+      circles[1].classList.add('text-c000');
 
       await animate({
         to: { scaleY: 1 },
@@ -47,7 +47,7 @@ function Hero() {
         to: { scaleX: 1 },
       });
 
-      circles[2].classList.add('text-white');
+      circles[2].classList.add('text-c000');
 
       await animate({
         to: { transformOrigin: 'bottom right' },
@@ -62,7 +62,7 @@ function Hero() {
         to: { scaleX: 0 },
       });
 
-      circles[3].classList.add('text-white');
+      circles[3].classList.add('text-c000');
 
       await wait(800);
 
