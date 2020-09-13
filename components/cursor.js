@@ -19,6 +19,9 @@ function Cursor() {
   useEffect(() => {
     function handleMouse(e) {
       const { clientX, clientY } = e;
+
+      console.log('xoxo');
+
       animate({ x: clientX, y: clientY });
     }
 
@@ -29,16 +32,12 @@ function Cursor() {
 
   return (
     <>
-      <div ref={cursorRef} style={{ x, y }} className="fixed z-10 top-0 left-0 border-2">
+      <a.div
+        ref={cursorRef}
+        style={{ x, y, pointerEvents: 'none' }}
+        className="fixed z-10 top-0 left-0 border-2 w-4 h-4">
         <CursorIcon />
-      </div>
-      <style jsx>{`
-        div {
-          pointer-events: none;
-          width: 12px;
-          height: 12px;
-        }
-      `}</style>
+      </a.div>
     </>
   );
 }

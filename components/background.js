@@ -95,7 +95,7 @@ function Background() {
 
   return (
     <>
-      <canvas ref={noiseCanvas} className="w-screen h-screen fixed top-0 left-0" />
+      <canvas ref={noiseCanvas} className="w-screen h-screen fixed top-0 left-0 pointer-events-none" />
       <style jsx>{`
         canvas {
           z-index: 0;

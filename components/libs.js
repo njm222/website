@@ -26,7 +26,7 @@ const libs = [
 function LibCard({ name, desc, url }) {
   return (
     <>
-      <a className="inline-block bg-c005 rounded-lg p-12 max-w-sm" href={`https://github.com/pmndrs/${name}`}>
+      <a className="block bg-c005 dark:bg-c095 rounded-lg p-12 max-w-sm" href={`https://github.com/pmndrs/${name}`}>
         <h3 className="font-bold text-lg mb-2">{name}</h3>
         <p className="text-050 leading-7">{desc}</p>
       </a>
@@ -44,24 +44,11 @@ function Libs() {
   return (
     <>
       <div className="card-container whitespace-no-wrap overflow-hidden">
-        <div
-          className="cards overflow-x-scroll py-8 pb-16"
-          css={`
-            padding-left: 20vw;
-            padding-right: 20vw;
-            margin-bottom: -2rem;
-            -webkit-scrolling: touch;
-
-            * {
-              white-space: normal;
-            }
-
-            > * + * {
-              margin-left: 50px;
-            }
-          `}>
+        <div className="cards overflow-x-scroll py-8 pb-16">
           {libs.map((lib) => (
-            <LibCard {...lib} key={lib.name} />
+            <div key={lib.name} className="inline-block">
+              <LibCard {...lib} />
+            </div>
           ))}
         </div>
       </div>
@@ -69,6 +56,21 @@ function Libs() {
         .card-container {
           margin-top: 100px;
           margin-bottom: 100px;
+        }
+
+        .cards {
+          padding-left: 20vw;
+          padding-right: 20vw;
+          margin-bottom: -2rem;
+          -webkit-scrolling: touch;
+        }
+
+        .cards * {
+          white-space: normal;
+        }
+
+        .cards > * + * {
+          margin-left: 50px;
         }
       `}</style>
     </>
