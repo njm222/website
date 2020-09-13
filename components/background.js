@@ -95,14 +95,15 @@ function Background() {
   }, []);
 
   return (
-    <canvas
-      ref={noiseCanvas}
-      className="w-screen h-screen fixed top-0 left-0"
-      css={`
-        z-index: 0;
-        opacity: 0.02;
-      `}
-    />
+    <>
+      <canvas ref={noiseCanvas} className="w-screen h-screen fixed top-0 left-0" />
+      <style jsx>{`
+        canvas {
+          z-index: 0;
+          opacity: 0.02;
+        }
+      `}</style>
+    </>
   );
 }
 
