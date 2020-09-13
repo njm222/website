@@ -1,7 +1,7 @@
 import React from 'react';
 import 'styled-components/macro';
 
-function GalleryIcon() {
+function NavigationExamples() {
   return (
     <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="23.5" cy="17.5" r="2.5" fill="black" />
@@ -12,7 +12,7 @@ function GalleryIcon() {
   );
 }
 
-function GalleryOtherIcon() {
+function NavigationDocs() {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="28" height="28" fill="url(#pattern0)" />
@@ -42,11 +42,11 @@ function Header() {
               height: 150px;
             `}>
             <div className="font-bold">
-              <GalleryIcon />
+              <NavigationExamples />
             </div>
 
             <div className="font-bold">
-              <GalleryOtherIcon />
+              <NavigationDocs />
             </div>
           </div>
         </div>
