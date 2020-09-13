@@ -1,15 +1,10 @@
-@mixin no-select {
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
+::selection {
+  color: white;
+  background-color: #000;
 }
 
 html,
 body {
-  @include no-select;
   background-color: $c005;
   margin: 0;
   padding: 0;
