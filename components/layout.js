@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from './footer';
 import Header from './header';
+import Background from './background';
 
 export default function Layout({ children, pageTitle, ...props }) {
   return (
@@ -11,7 +12,13 @@ export default function Layout({ children, pageTitle, ...props }) {
 
       <Header />
 
-      <main>{children}</main>
+      <main
+        css={`
+          z-index: 1;
+        `}>
+        {children}
+      </main>
+      <Background />
 
       <Footer />
     </>
