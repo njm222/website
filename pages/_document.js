@@ -12,8 +12,8 @@ export default class Doc extends Document {
         <Head>
           <link rel="amphtml" href="https://pmnd.rs/" />
           <link rel="canonical" href="https://pmnd.rs/" />
-          <meta name="googlebot" content="follow, index, noarchive" />
-          <meta name="robots" content="follow, index, noarchive" />
+          {/* <meta name="googlebot" content="follow, index, noarchive" /> */}
+          {/* <meta name="robots" content="follow, index, noarchive" /> */}
           <meta name="viewport" content="initial-scale=1,width=device-width" />
 
           <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
