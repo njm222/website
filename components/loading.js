@@ -73,8 +73,8 @@ function Hero() {
   });
 
   return (
-    <a.div className="bg-c100 w-screen  h-screen fixed z-10 top-0 left-0" style={{ opacity }}>
-      <div className="outer-container h-screen relative text-c005">
+    <a.div className="bg-c100 w-screen h-screen fixed z-10 top-0 left-0" style={{ opacity }}>
+      <div className="outer-container h-screen relative">
         <div
           className="flex justify-between items-center"
           css={`

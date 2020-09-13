@@ -3,18 +3,18 @@ import 'styled-components/macro';
 
 function NavigationExamples() {
   return (
-    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="23.5" cy="17.5" r="2.5" fill="black" />
-      <circle cx="8.5" cy="17.5" r="2.5" fill="black" />
-      <circle cx="23.5" cy="2.5" r="2.5" fill="black" />
-      <circle cx="8.5" cy="2.5" r="2.5" fill="black" />
+    <svg width="26" height="20" viewBox="0 0 26 20" className="fill-current">
+      <circle cx="23.5" cy="17.5" r="2.5" />
+      <circle cx="8.5" cy="17.5" r="2.5" />
+      <circle cx="23.5" cy="2.5" r="2.5" />
+      <circle cx="8.5" cy="2.5" r="2.5" />
     </svg>
   );
 }
 
 function NavigationDocs() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="28" height="28" viewBox="0 0 28 28" className="fill-current">
       <rect width="28" height="28" fill="url(#pattern0)" />
       <defs>
         <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

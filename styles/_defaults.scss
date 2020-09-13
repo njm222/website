@@ -12,9 +12,18 @@
 html,
 body {
   background-color: $c005;
+  color: $c100;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: $c100;
+    color: $c005;
+  }
 }
 
 /**
