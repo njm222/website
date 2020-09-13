@@ -33,25 +33,27 @@ function NavigationDocs() {
 
 function Header() {
   return (
-    <div className="fixed left-0 top-0 right-0">
-      <div className="outer-container relative">
-        <div className="inner-container">
-          <div
-            className="flex justify-between items-center"
-            css={`
-              height: 150px;
-            `}>
-            <div className="font-bold">
-              <NavigationExamples />
-            </div>
+    <header>
+      <div className="fixed left-0 top-0 right-0">
+        <div className="outer-container relative">
+          <div className="inner-container">
+            <div
+              className="flex justify-between items-center"
+              css={`
+                height: 150px;
+              `}>
+              <div className="font-bold">
+                <NavigationExamples />
+              </div>
 
-            <div className="font-bold">
-              <NavigationDocs />
+              <div className="font-bold">
+                <NavigationDocs />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
