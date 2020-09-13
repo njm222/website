@@ -1,5 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+/**
+ * @TODO Resolve styled component #108
+ */
 import 'styled-components/macro';
+
+import { useEffect, useRef, useState } from 'react';
 import { a, useSpring } from '@react-spring/web';
 import Logo from './logo';
 
@@ -75,11 +79,7 @@ function Hero() {
   return (
     <a.div className="bg-c100 w-screen  h-screen fixed z-10 top-0 left-0" style={{ opacity }}>
       <div className="outer-container h-screen relative text-c005">
-        <div
-          className="flex justify-between items-center"
-          css={`
-            height: 150px;
-          `}>
+        <div className="header__loading flex justify-between items-center">
           <div className="font-bold">
             <svg
               ref={svgIconRef}
@@ -95,6 +95,11 @@ function Hero() {
             </svg>
           </div>
         </div>
+        <style jsx>{`
+          .header__loading {
+            height: 150px;
+          }
+        `}</style>
         <div className="absolute bottom-0 left-0 right-0">
           <a.div
             style={maskProps}

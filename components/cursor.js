@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import 'styled-components/macro';
 import { a, useSpring } from '@react-spring/web';
 
 function CursorIcon() {
@@ -29,17 +28,18 @@ function Cursor() {
   }, [animate]);
 
   return (
-    <a.div
-      ref={cursorRef}
-      style={{ x, y }}
-      className="fixed z-10 top-0 left-0 border-2"
-      css={`
-        pointer-events: none;
-        width: 12px;
-        height: 12px;
-      `}>
-      <CursorIcon />
-    </a.div>
+    <>
+      <div ref={cursorRef} style={{ x, y }} className="fixed z-10 top-0 left-0 border-2">
+        <CursorIcon />
+      </div>
+      <style jsx>{`
+        div {
+          pointer-events: none;
+          width: 12px;
+          height: 12px;
+        }
+      `}</style>
+    </>
   );
 }
 

@@ -13,12 +13,13 @@ export default function Layout({ children, pageTitle, ...props }) {
 
       <Header />
 
-      <main
-        css={`
+      <main>{children}</main>
+      <style jsx>{`
+        main {
           z-index: 1;
-        `}>
-        {children}
-      </main>
+        }
+      `}</style>
+
       <Background />
       <Cursor />
       <Footer />
