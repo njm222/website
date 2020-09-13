@@ -32,8 +32,6 @@ a:visited {
 }
 
 main {
-  height: 90vh;
-
   h1 {
     font-size: 5rem;
     font-weight: 400;
@@ -44,7 +42,6 @@ footer {
   height: 10vh;
 }
 
-main,
 footer {
   align-items: center;
   display: flex;

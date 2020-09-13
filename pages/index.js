@@ -1,12 +1,15 @@
 import Layout from '../components/layout';
+import Hero from '../components/hero';
+import Header from '../components/header';
+import Intro from '../components/intro';
 
 export default function Index() {
   return (
     <>
       <Layout pageTitle="Poimandres">
-        <a href="https://github.com/pmndrs">
-          <h1>Poimandres</h1>
-        </a>
+        <Header />
+        <Hero />
+        <Intro />
       </Layout>
     </>
   );

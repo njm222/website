@@ -3,8 +3,8 @@
 // https://github.com/rsms/inter
 
 $font-display: swap;
-$font-family: "Inter";
-$font-path: "https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/";
+$font-family: 'Inter';
+$font-path: 'https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/';
 
 @mixin fontface($weight, $style, $name) {
   @font-face {
@@ -12,7 +12,8 @@ $font-path: "https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/";
     font-family: $font-family;
     font-style: $style;
     font-weight: $weight;
-    src: url("#{$font-path}Inter-#{$name}.woff2") format("woff2"), url("#{$font-path}Inter-#{$name}.woff") format("woff");
+    src: url('#{$font-path}Inter-#{$name}.woff2') format('woff2'),
+      url('#{$font-path}Inter-#{$name}.woff') format('woff');
   }
 }
 
@@ -40,28 +41,29 @@ $font-path: "https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/";
 @mixin variablefont($style, $weight, $instance, $name) {
   @font-face {
     font-display: $font-display;
-    font-family: "#{$font-family} var";
+    font-family: '#{$font-family} var';
     font-style: $style;
     font-weight: $weight;
     font-named-instance: $instance;
-    src: url("#{$font-path}Inter-#{$name}.woff2") format("woff2");
+    src: url('#{$font-path}Inter-#{$name}.woff2') format('woff2');
   }
 }
 
-@include variablefont(normal, "100 900", Regular, "roman.var");
-@include variablefont(italic, "100 900", Italic, "italic.var");
+@include variablefont(normal, '100 900', Regular, 'roman.var');
+@include variablefont(italic, '100 900', Italic, 'italic.var');
 
 // variable experimental
 @font-face {
   font-display: $font-display;
-  font-family: "#{$font-family} var experimental";
+  font-family: '#{$font-family} var experimental';
   font-style: oblique 0deg 10deg;
   font-weight: 100 900;
-  src: url("#{$font-path}Inter.var.woff2") format("woff2");
+  src: url('#{$font-path}Inter.var.woff2') format('woff2');
 }
 
-$font-main: -apple-system, BlinkMacSystemFont, "Inter var", "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, Roboto, Ubuntu, sans-serif;
-$font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-main: 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial,
+  Roboto, Ubuntu, sans-serif;
+$font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 :root {
   -moz-tab-size: 4;
@@ -71,7 +73,6 @@ $font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
 
 html {
   font-family: $font-main;
-  font-size: 10px;
 }
 
 body {
