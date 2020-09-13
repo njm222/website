@@ -20,14 +20,13 @@ function Cursor() {
   useEffect(() => {
     function handleMouse(e) {
       const { clientX, clientY } = e;
-      // cursorRef.current.style.transform = `translateX(${clientX}px) translateY(${clientY}px)`;
       animate({ x: clientX, y: clientY });
     }
 
     window.addEventListener('mousemove', handleMouse);
 
     return () => window.removeEventListener('mousemove', handleMouse);
-  });
+  }, [animate]);
 
   return (
     <a.div
