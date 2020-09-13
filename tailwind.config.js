@@ -16,5 +16,10 @@ module.exports = {
       milk: '#f2f2f2',
       gray: '#ccc',
     },
+    fontSize: {
+      md: 15,
+      lg: 25,
+      '2xl': 30,
+    },
   },
 };
