@@ -1,18 +1,40 @@
+/**
+ * @TODO Add dragging interaction to move the slider
+ */
 import React from 'react';
 import 'styled-components/macro';
 
-function LibCard() {
+const libs = [
+  {
+    name: 'react-spring',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    name: 'react-three',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    name: 'jotai',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    name: 'react-three/flex',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+];
+
+function LibCard({ name, desc, url }) {
   return (
-    <div
+    <a
       className="inline-block bg-milk rounded-lg p-12 max-w-sm"
       css={`
         height: 200px;
         box-shadow: -15px -15px 25px rgba(255, 255, 255, 0.5), 15px 15px 25px rgba(204, 204, 204, 0.5);
-      `}>
-      <h3 className="font-bold text-lg mb-2">React Spring</h3>
-
-      <p className="text-gray leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
+      `}
+      href={`https://github.com/poimandres/${name}`}>
+      <h3 className="font-bold text-lg mb-2">{name}</h3>
+      <p className="text-gray leading-7">{desc}</p>
+    </a>
   );
 }
 
@@ -40,10 +62,9 @@ function Libs() {
             margin-left: 50px;
           }
         `}>
-        <LibCard />
-        <LibCard />
-        <LibCard />
-        <LibCard />
+        {libs.map((lib) => (
+          <LibCard {...lib} key={lib.name} />
+        ))}
       </div>
     </div>
   );
