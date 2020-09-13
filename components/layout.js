@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Footer from './footer';
 import Header from './header';
 import Background from './background';
+import Cursor from './cursor';
 
 export default function Layout({ children, pageTitle, ...props }) {
   return (
@@ -19,7 +20,7 @@ export default function Layout({ children, pageTitle, ...props }) {
         {children}
       </main>
       <Background />
-
+      <Cursor />
       <Footer />
     </>
   );
