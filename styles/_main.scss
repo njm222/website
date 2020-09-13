@@ -1,45 +1,17 @@
-::selection {
-  color: white;
-  background-color: #000;
+.outer-container {
+  margin-left: 4rem;
 }
 
-html,
-body {
-  background-color: $c005;
-  margin: 0;
-  padding: 0;
+.inner-container {
+  margin-right: 4rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-a,
-a:active,
-a:hover,
-a:visited {
-  color: currentColor;
-  outline: 0;
-}
-
-main {
-  h1 {
-    font-size: 5rem;
-    font-weight: 400;
+@media screen and (min-width: 1024px) {
+  .outer-container {
+    margin-left: 20%;
   }
-}
 
-footer {
-  height: 10vh;
-}
-
-footer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  .inner-container {
+    width: 75%;
+  }
 }

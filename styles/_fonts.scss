@@ -1,4 +1,3 @@
-// fonts
 // https://npm.im/inter-ui
 // https://github.com/rsms/inter
 
@@ -6,6 +5,7 @@ $font-display: swap;
 $font-family: 'Inter';
 $font-path: 'https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/';
 
+// mixin fonts
 @mixin fontface($weight, $style, $name) {
   @font-face {
     font-display: $font-display;
@@ -37,7 +37,7 @@ $font-path: 'https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/';
 @include fontface(900, italic, BlackItalic);
 @include fontface(900, normal, Black);
 
-// variable fonts
+// mixin variable fonts
 @mixin variablefont($style, $weight, $instance, $name) {
   @font-face {
     font-display: $font-display;
@@ -49,32 +49,13 @@ $font-path: 'https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/';
   }
 }
 
+// include variable fonts
 @include variablefont(normal, '100 900', Regular, 'roman.var');
 @include variablefont(italic, '100 900', Italic, 'italic.var');
-
-// variable experimental
 @font-face {
   font-display: $font-display;
   font-family: '#{$font-family} var experimental';
   font-style: oblique 0deg 10deg;
   font-weight: 100 900;
   src: url('#{$font-path}Inter.var.woff2') format('woff2');
-}
-
-$font-main: 'Inter var experimental', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
-  Helvetica, Arial, Roboto, Ubuntu, sans-serif;
-$font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
-
-:root {
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-}
-
-html {
-  font-family: $font-main;
-}
-
-body {
-  font-size: 1.3rem;
 }
