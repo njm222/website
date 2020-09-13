@@ -39,6 +39,7 @@ module.exports = {
       md: 15,
       lg: 25,
       '2xl': 30,
+      '5xl': 100,
     },
   },
 };
