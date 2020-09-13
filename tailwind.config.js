@@ -11,10 +11,19 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
 
-      black: '#000',
-      white: '#fff',
-      milk: '#f2f2f2',
-      gray: '#ccc',
+      c000: '#ffffff',
+      c005: '#f2f2f2',
+      c010: '#e5e5e5',
+      c020: '#cccccc',
+      c030: '#b2b2b2',
+      c040: '#999999',
+      c050: '#7f7f7f',
+      c060: '#666666',
+      c070: '#4c4c4c',
+      c080: '#333333',
+      c090: '#191919',
+      c095: '#0a0a0a',
+      c100: '#000000',
     },
     fontFamily: {
       sans: [

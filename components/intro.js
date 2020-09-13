@@ -20,7 +20,7 @@ function Intro() {
             Creative frontend design & development toolkit for React
           </div>
 
-          <div className="text-gray leading-6">
+          <div className="text-c050 leading-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a enim lacus. Vivamus bibendum lobortis ipsum,
             sit amet interdum enim. Donec et malesuada quam.
           </div>

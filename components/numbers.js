@@ -13,7 +13,7 @@ function Stroke({ children }) {
         `}>
         {children}
       </div>
-      <div className="font-bold relative z-10 text-milk">{children}</div>
+      <div className="font-bold relative z-10 text-c005">{children}</div>
     </div>
   );
 }
