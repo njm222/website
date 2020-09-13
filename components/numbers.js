@@ -5,7 +5,7 @@ function Stroke({ children }) {
         <div aria-hidden={true} className="number font-bold absolute z-1">
           {children}
         </div>
-        <div className="font-bold relative z-10 text-c005">{children}</div>
+        <div className="font-bold relative z-10 text-c005 dark:text-c095">{children}</div>
       </div>
       <style jsx>{`
         .number {
