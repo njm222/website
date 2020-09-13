@@ -11,13 +11,14 @@ function wait(time) {
 }
 
 function Hero() {
-  const [, set] = useState(0);
+  const [paused, set] = useState(true);
 
   useEffect(() => {
-    set(1);
+    set(false);
   }, []);
 
   const { visibility, ...maskProps } = useSpring({
+    pause: paused,
     from: { scaleX: 0.001, scaleY: 0, opacity: 0, visibility: 'hidden' },
     to: async (animate) => {
       await wait(800);
