@@ -4,7 +4,7 @@ import Header from './header';
 import Background from './background';
 import Cursor from './cursor';
 
-export default function Layout({ children, pageTitle, ...props }) {
+function Layout({ children, pageTitle, ...props }) {
   return (
     <>
       <Head>
@@ -26,3 +26,5 @@ export default function Layout({ children, pageTitle, ...props }) {
     </>
   );
 }
+
+export default Layout;
