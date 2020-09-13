@@ -41,6 +41,7 @@ export default class Doc extends Document {
           <meta property="og:site_name" content="Poimandres" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://pmnd.rs" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
         <body>
           <Main />

@@ -1,5 +1,28 @@
 @charset "utf-8";
 
-@import "variables";
-@import "fonts";
-@import "main";
+@import 'variables';
+@import 'fonts';
+@import 'main';
+
+.outer-container {
+  margin-left: 4rem;
+}
+
+.inner-container {
+  margin-right: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .outer-container {
+    margin-left: 20%;
+  }
+
+  .inner-container {
+    width: 75%;
+  }
+}
+
+.link:hover {
+  background-color: black;
+  color: white;
+}
