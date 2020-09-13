@@ -15,6 +15,17 @@ function Footer() {
           </svg>
         </a>
       </footer>
+      <style jsx>
+        {`
+          footer {
+            align-items: center;
+            display: flex;
+            height: 10vh;
+            justify-content: center;
+            width: 100%;
+          }
+        `}
+      </style>
     </>
   );
 }
