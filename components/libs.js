@@ -20,7 +20,7 @@ function Libs() {
   return (
     <div className="outer-container whitespace-no-wrap">
       <div
-        className="overflow-x-hidden pb-8"
+        className="overflow-x-hidden py-8"
         css={`
           * {
             white-space: normal;
