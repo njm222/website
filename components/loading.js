@@ -77,43 +77,45 @@ function Hero() {
   });
 
   return (
-    <a.div className="bg-c100 w-screen  h-screen fixed z-10 top-0 left-0" style={{ opacity }}>
-      <div className="outer-container h-screen relative text-c005">
-        <div className="header__loading flex justify-between items-center">
-          <div className="font-bold">
-            <svg
-              ref={svgIconRef}
-              width="26"
-              height="20"
-              viewBox="0 0 26 20"
-              className="fill-current text-c100"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="23.5" cy="17.5" r="2.5" />
-              <circle cx="8.5" cy="17.5" r="2.5" />
-              <circle cx="23.5" cy="2.5" r="2.5" />
-              <circle cx="8.5" cy="2.5" r="2.5" />
-            </svg>
+    <>
+      <a.div className="bg-c100 w-screen  h-screen fixed z-10 top-0 left-0" style={{ opacity }}>
+        <div className="outer-container h-screen relative text-c005">
+          <div className="header__loading flex justify-between items-center">
+            <div className="font-bold">
+              <svg
+                ref={svgIconRef}
+                width="26"
+                height="20"
+                viewBox="0 0 26 20"
+                className="fill-current text-c100"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="23.5" cy="17.5" r="2.5" />
+                <circle cx="8.5" cy="17.5" r="2.5" />
+                <circle cx="23.5" cy="2.5" r="2.5" />
+                <circle cx="8.5" cy="2.5" r="2.5" />
+              </svg>
+            </div>
+          </div>
+          <style jsx>{`
+            .header__loading {
+              height: 150px;
+            }
+          `}</style>
+          <div className="absolute bottom-0 left-0 right-0">
+            <a.div
+              style={maskProps}
+              className="bg-c000 absolute h-full w-full"
+              css={`
+                transform-origin: bottom left;
+              `}
+            />
+            <a.div style={{ visibility }} className="text-c005">
+              <Logo />
+            </a.div>
           </div>
         </div>
-        <style jsx>{`
-          .header__loading {
-            height: 150px;
-          }
-        `}</style>
-        <div className="absolute bottom-0 left-0 right-0">
-          <a.div
-            style={maskProps}
-            className="bg-c000 absolute h-full w-full"
-            css={`
-              transform-origin: bottom left;
-            `}
-          />
-          <a.div style={{ visibility }} className="text-c005">
-            <Logo />
-          </a.div>
-        </div>
-      </div>
-    </a.div>
+      </a.div>
+    </>
   );
 }
 
