@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef } from 'react';
-import 'styled-components/macro';
 
 function Background() {
   const noiseCanvas = useRef();

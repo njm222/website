@@ -4,7 +4,7 @@ import Header from './header';
 import Background from './background';
 import Cursor from './cursor';
 
-export default function Layout({ children, pageTitle, ...props }) {
+function Layout({ children, pageTitle, ...props }) {
   return (
     <>
       <Head>
@@ -13,15 +13,18 @@ export default function Layout({ children, pageTitle, ...props }) {
 
       <Header />
 
-      <main
-        css={`
+      <main>{children}</main>
+      <style jsx>{`
+        main {
           z-index: 1;
-        `}>
-        {children}
-      </main>
+        }
+      `}</style>
+
       <Background />
       <Cursor />
       <Footer />
     </>
   );
 }
+
+export default Layout;

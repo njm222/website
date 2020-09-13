@@ -1,6 +1,3 @@
-import React from 'react';
-import 'styled-components/macro';
-
 function NavigationExamples() {
   return (
     <svg width="26" height="20" viewBox="0 0 26 20" className="fill-current">
@@ -33,27 +30,30 @@ function NavigationDocs() {
 
 function Header() {
   return (
-    <header>
-      <div className="fixed left-0 top-0 right-0">
-        <div className="outer-container relative">
-          <div className="inner-container">
-            <div
-              className="flex justify-between items-center"
-              css={`
-                height: 150px;
-              `}>
-              <div>
-                <NavigationExamples />
-              </div>
+    <>
+      <header>
+        <div className="fixed left-0 top-0 right-0">
+          <div className="outer-container relative">
+            <div className="inner-container">
+              <div className="header flex justify-between items-center">
+                <div>
+                  <NavigationExamples />
+                </div>
 
-              <div>
-                <NavigationDocs />
+                <div>
+                  <NavigationDocs />
+                </div>
               </div>
+              <style jsx>{`
+                .header {
+                  height: 150px;
+                }
+              `}</style>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
 
