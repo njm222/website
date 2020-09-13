@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'styled-components/macro';
 import { a, useSpring } from '@react-spring/web';
 import Logo from './logo';
@@ -18,6 +18,8 @@ function Hero() {
     set(false);
   }, []);
 
+  const svgIconRef = useRef();
+
   const { visibility, opacity, ...maskProps } = useSpring({
     pause: paused,
     from: {
@@ -29,7 +31,11 @@ function Hero() {
       abc: 1,
     },
     to: async (animate) => {
+      svgIconRef.current.querySelectorAll('circle')[0].classList.add('text-white');
+
       await wait(800);
+
+      svgIconRef.current.querySelectorAll('circle')[1].classList.add('text-white');
 
       await animate({
         to: { scaleY: 1 },
@@ -37,8 +43,9 @@ function Hero() {
 
       await animate({
         to: { scaleX: 1 },
-        config: { tension: 90, mass: 1 },
       });
+
+      svgIconRef.current.querySelectorAll('circle')[2].classList.add('text-white');
 
       await animate({
         to: { transformOrigin: 'bottom right' },
@@ -51,8 +58,11 @@ function Hero() {
 
       await animate({
         to: { scaleX: 0 },
-        config: { tension: 90, mass: 1 },
       });
+
+      svgIconRef.current.querySelectorAll('circle')[3].classList.add('text-white');
+
+      await wait(800);
 
       await animate({
         to: { opacity: 0 },
@@ -62,7 +72,27 @@ function Hero() {
 
   return (
     <a.div className="bg-black w-screen  h-screen fixed z-10 top-0 left-0" style={{ opacity }}>
-      <div className="outer-container h-screen relative">
+      <div className="outer-container h-screen relative text-milk">
+        <div
+          className="flex justify-between items-center"
+          css={`
+            height: 150px;
+          `}>
+          <div className="font-bold">
+            <svg
+              ref={svgIconRef}
+              width="26"
+              height="20"
+              viewBox="0 0 26 20"
+              className="fill-current text-black"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="23.5" cy="17.5" r="2.5" />
+              <circle cx="8.5" cy="17.5" r="2.5" />
+              <circle cx="23.5" cy="2.5" r="2.5" />
+              <circle cx="8.5" cy="2.5" r="2.5" />
+            </svg>
+          </div>
+        </div>
         <div
           className="absolute bottom-0 left-0 right-0"
           css={`
@@ -75,7 +105,7 @@ function Hero() {
               transform-origin: bottom left;
             `}
           />
-          <a.div style={{ visibility }} className="text-white">
+          <a.div style={{ visibility }} className="text-milk">
             <Logo />
           </a.div>
         </div>

@@ -42,11 +42,11 @@ function Header() {
               css={`
                 height: 150px;
               `}>
-              <div className="font-bold">
+              <div>
                 <NavigationExamples />
               </div>
 
-              <div className="font-bold">
+              <div>
                 <NavigationDocs />
               </div>
             </div>
