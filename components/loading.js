@@ -28,14 +28,16 @@ function Hero() {
       opacity: 1,
       visibility: 'hidden',
       transformOrigin: 'bottom left',
-      abc: 1,
+      scrollTop: 0,
     },
     to: async (animate) => {
-      svgIconRef.current.querySelectorAll('circle')[0].classList.add('text-white');
+      const circles = svgIconRef.current.querySelectorAll('circle');
+
+      circles[0].classList.add('text-white');
 
       await wait(800);
 
-      svgIconRef.current.querySelectorAll('circle')[1].classList.add('text-white');
+      circles[1].classList.add('text-white');
 
       await animate({
         to: { scaleY: 1 },
@@ -45,7 +47,7 @@ function Hero() {
         to: { scaleX: 1 },
       });
 
-      svgIconRef.current.querySelectorAll('circle')[2].classList.add('text-white');
+      circles[2].classList.add('text-white');
 
       await animate({
         to: { transformOrigin: 'bottom right' },
@@ -60,7 +62,7 @@ function Hero() {
         to: { scaleX: 0 },
       });
 
-      svgIconRef.current.querySelectorAll('circle')[3].classList.add('text-white');
+      circles[3].classList.add('text-white');
 
       await wait(800);
 
