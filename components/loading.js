@@ -93,11 +93,7 @@ function Hero() {
             </svg>
           </div>
         </div>
-        <div
-          className="absolute bottom-0 left-0 right-0"
-          css={`
-            bottom: -1vw;
-          `}>
+        <div className="absolute bottom-0 left-0 right-0">
           <a.div
             style={maskProps}
             className="bg-white absolute h-full w-full"
