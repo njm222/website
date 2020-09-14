@@ -81,7 +81,7 @@ function Hero() {
       <a.div className="bg-c100 w-screen h-screen fixed z-10 top-0 left-0 pointer-events-none" style={{ opacity }}>
         <div className="outer-container h-screen relative text-c005">
           {/* The dots in the upper left corner of the screen */}
-          <div className="header__loading flex justify-between items-center">
+          <div className="header-loadding flex justify-between items-center">
             <svg
               ref={svgIconRef}
               width="26"
@@ -97,7 +97,7 @@ function Hero() {
           </div>
 
           <style jsx>{`
-            .header__loading {
+            .header-loadding {
               height: 150px;
             }
           `}</style>

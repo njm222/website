@@ -20,7 +20,7 @@ function Stroke({ children }) {
 function Numbers() {
   return (
     <>
-      <div className="number__container outer-container">
+      <div className="number-container outer-container">
         <div className="inner-container flex justify-between">
           <div className="text-5xl">
             <Stroke>20M+</Stroke>
@@ -36,7 +36,7 @@ function Numbers() {
         </div>
       </div>
       <style jsx>{`
-        .number_container {
+        .number-container {
           margin-top: 100px;
           margin-bottom: 100px;
         }
