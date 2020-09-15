@@ -19,9 +19,6 @@ function Cursor() {
   useEffect(() => {
     function handleMouse(e) {
       const { clientX, clientY } = e;
-
-      console.log('xoxo');
-
       animate({ x: clientX, y: clientY });
     }
 
