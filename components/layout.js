@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Footer from './footer';
 import Header from './header';
 import Background from './background';
-import Cursor from './cursor';
+// import Cursor from './cursor';
 
 function Layout({ children, pageTitle, ...props }) {
   return (
@@ -21,7 +21,7 @@ function Layout({ children, pageTitle, ...props }) {
       `}</style>
 
       <Background />
-      <Cursor />
+      {/* <Cursor /> */}
       <Footer />
     </>
   );
