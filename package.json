@@ -4,22 +4,15 @@
     "@react-spring/web": "^9.0.0-rc.3",
     "autoprefixer": "^9.8.6",
     "babel-plugin-macros": "^2.8.0",
-    "next": "9.5.3",
-    "next-pwa": "3.1.4",
+    "next": "^9.5.3",
+    "next-pwa": "^3.1.4",
     "postcss-import": "^12.0.1",
     "prettier": "^2.1.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "sass": "1.26.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.10",
     "styled-components": "^5.2.0",
     "tailwindcss": "^1.8.9"
-  },
-  "license": "MIT",
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "export": "next build && next export",
-    "start": "next start"
   },
   "devDependencies": {
     "husky": "^4.3.0",
@@ -29,5 +22,12 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "export": "next build && next export",
+    "start": "next start"
   }
 }
