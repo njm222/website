@@ -14,7 +14,11 @@ function NavigationExamples() {
 function NavigationDocs() {
   return (
     <>
-      <div>Docs</div>
+      <svg width="15" height="14" viewBox="0 0 15 14">
+        <path d="M0 1H15" stroke="black" stroke-width="2" />
+        <path d="M0 7H15" stroke="black" stroke-width="2" />
+        <path d="M0 13H15" stroke="black" stroke-width="2" />
+      </svg>
     </>
   );
 }
