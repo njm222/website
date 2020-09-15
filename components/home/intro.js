@@ -4,11 +4,8 @@ function Intro() {
       <div className="outer-container">
         <div className="lg:flex inner-container justify-between">
           <div className="max-w-md">
-            <div className="font-bold mb-2 text-2xl lg:text-3xl">
-              Creative frontend design & development toolkit for React
-            </div>
-
-            <div className="text-c050 leading-6">
+            <div className="font-bold mb-2 text-lg">Creative frontend design & development toolkit for React</div>
+            <div className="text-sm text-c050 leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a enim lacus. Vivamus bibendum lobortis
               ipsum, sit amet interdum enim. Donec et malesuada quam.
             </div>

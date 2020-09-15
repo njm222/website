@@ -48,10 +48,11 @@ module.exports = {
       ],
     },
     fontSize: {
+      sm: 13,
       md: 15,
       lg: 25,
-      '2xl': 30,
-      '5xl': 100,
+      '2xl': 50,
+      '4xl': 100,
     },
   },
 };

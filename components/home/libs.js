@@ -22,7 +22,7 @@ function LibCard({ name, desc, url }) {
     <>
       <a className="block bg-c005 dark:bg-c095 rounded-lg p-12 max-w-sm" href={`https://github.com/pmndrs/${name}`}>
         <h3 className="font-bold text-lg mb-2">{name}</h3>
-        <p className="text-050 leading-7">{desc}</p>
+        <p className="text-sm text-050 leading-7">{desc}</p>
       </a>
       <style jsx>{`
         a {
