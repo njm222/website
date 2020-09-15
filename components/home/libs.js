@@ -1,9 +1,3 @@
-/**
- * @TODO Add dragging interaction to move the slider
- * @TODO Resolve styled component for .cards #48
- */
-import 'styled-components/macro';
-
 const libs = [
   {
     name: 'react-spring',
