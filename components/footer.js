@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer>
+      <footer className="flex justify-center items-center w-full h-16">
         <a href="https://vercel.com?utm_source=pmndrs&utm_campaign=oss" target="_blank" rel="noopener">
           <svg width="150" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -15,15 +15,6 @@ function Footer() {
           </svg>
         </a>
       </footer>
-      <style jsx>{`
-        footer {
-          align-items: center;
-          display: flex;
-          height: 10vh;
-          justify-content: center;
-          width: 100%;
-        }
-      `}</style>
     </>
   );
 }

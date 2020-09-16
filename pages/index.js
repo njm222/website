@@ -1,15 +1,16 @@
 import Layout from '../components/layout';
-import Hero from '../components/home/hero';
-import Intro from '../components/home/intro';
-import Libs from '../components/home/libs';
+import Intro from '../components/intro/intro';
+import Home from '../components/home/home';
 
 export default function Index() {
   return (
     <>
       <Layout pageTitle="Poimandres">
-        <Hero />
+        {/* intro animation */}
         <Intro />
-        <Libs />
+
+        {/* page content */}
+        {/* <Home /> */}
       </Layout>
     </>
   );
