@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 export default function Docs() {
   return (
     <>
-      <Layout pageTitle="Poimandres"></Layout>
+      <Layout pageTitle="Poimandres | Docs"></Layout>
     </>
   );
 }
