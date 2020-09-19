@@ -1,8 +1,10 @@
-const withPWA = require('next-pwa');
+// const withPWA = require('next-pwa');
 
-module.exports = withPWA({
-  crossOrigin: 'anonymous',
-  pwa: {
-    dest: 'public',
-  },
-});
+// module.exports = withPWA({
+//   crossOrigin: 'anonymous',
+//   pwa: {
+//     dest: 'public',
+//   },
+// });
+
+module.exports = {};
