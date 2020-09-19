@@ -30,7 +30,7 @@ function Header() {
         <div className="fixed left-0 top-0 right-0">
           <div className="outer-container relative">
             <div className="inner-container">
-              <div className="header flex justify-between items-center">
+              <div className="header flex justify-between items-center h-24">
                 <div>
                   <NavigationExamples />
                 </div>
@@ -39,11 +39,6 @@ function Header() {
                   <NavigationDocs />
                 </div>
               </div>
-              <style jsx>{`
-                .header {
-                  height: 100px;
-                }
-              `}</style>
             </div>
           </div>
         </div>
