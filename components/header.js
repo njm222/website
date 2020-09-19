@@ -34,7 +34,6 @@ function Header() {
                 <div>
                   <NavigationExamples />
                 </div>
-
                 <div>
                   <NavigationDocs />
                 </div>
