@@ -14,9 +14,10 @@ function Layout({ children, pageTitle, ...props }) {
 
       <main>{children}</main>
 
-      <Background />
-      {/* <Cursor /> */}
       <Footer />
+
+      {/* <Cursor /> */}
+      {/* <Background /> */}
     </>
   );
 }

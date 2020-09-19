@@ -1,13 +1,11 @@
-import Hero from './hero';
-import Intro from './intro';
-import Libs from './libs';
-
 function Home() {
   return (
     <>
-      <Hero />
-      <Intro />
-      <Libs />
+      <div className="flex align-center justify-center w-screen h-screen">
+        <div className="m-auto">
+          <div className="text-lg font-semibold">Poimandres</div>
+        </div>
+      </div>
     </>
   );
 }

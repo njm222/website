@@ -7,10 +7,10 @@ export default function Index() {
     <>
       <Layout pageTitle="Poimandres">
         {/* intro animation */}
-        <Intro />
+        {/* <Intro /> */}
 
         {/* page content */}
-        {/* <Home /> */}
+        <Home />
       </Layout>
     </>
   );
