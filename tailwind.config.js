@@ -1,8 +1,5 @@
 module.exports = {
   purge: ['./pages/**/*.js', './components/*.js'],
-  experimental: {
-    darkModeVariant: true,
-  },
   theme: {
     screens: {
       sm: '640px',
