@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { Loader } from 'drei/prototyping/Loader';
 
@@ -31,6 +32,8 @@ function Intro() {
           shadow-camera-top={10}
           shadow-camera-bottom={-10}
         />
+
+        <Suspense fallback={null}></Suspense>
 
         {/* scenes */}
         <Scenes />
