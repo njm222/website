@@ -1,4 +1,5 @@
 import { Canvas } from 'react-three-fiber';
+import { Loader } from 'drei/prototyping/Loader';
 
 import Scenes from './scenes';
 
@@ -36,6 +37,8 @@ function Intro() {
         {/* effects */}
         {/* <EffectComposer></EffectComposer> */}
       </Canvas>
+
+      <Loader />
     </div>
   );
 }
