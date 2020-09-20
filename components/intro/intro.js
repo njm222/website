@@ -34,6 +34,7 @@ function Intro() {
           shadow-camera-bottom={-10}
         />
 
+        {/* loading */}
         <Suspense fallback={null}></Suspense>
 
         {/* scenes */}
