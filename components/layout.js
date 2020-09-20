@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Footer from './footer';
 import Header from './header';
-import Background from './background';
+
+// import Background from './background';
+// import Cursor from './cursor';
 
 function Layout({ children, pageTitle, ...props }) {
   return (
