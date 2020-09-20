@@ -11,7 +11,8 @@ function Intro() {
         antialias
         camera={{ position: [0, 0, 15], near: 5, far: 40 }}
         colorManagement
-        gl={{ antialias: true, alpha: false }}
+        gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
+        onCreated={({ gl }) => gl.setClearColor('#ffffff')}
         pixelRatio={1}
         shadowMap>
         <color attach="background" args={['white']} />
