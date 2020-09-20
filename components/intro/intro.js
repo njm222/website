@@ -38,9 +38,6 @@ function Intro() {
 
         {/* scenes */}
         <Scenes />
-
-        {/* effects */}
-        {/* <EffectComposer></EffectComposer> */}
       </Canvas>
 
       <Loader />
