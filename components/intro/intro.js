@@ -7,11 +7,12 @@ function Intro() {
   return (
     <div className="intro fixed left-0 top-0 right-0 w-screen h-screen z-50">
       <Canvas
-        pixelRatio={1}
-        gl={{ antialias: false, alpha: false }}
+        antialias
+        camera={{ position: [0, 0, 15], near: 5, far: 40 }}
         colorManagement
-        shadowMap
-        camera={{ position: [0, 0, 15], near: 5, far: 40 }}>
+        gl={{ antialias: true, alpha: false }}
+        pixelRatio={1}
+        shadowMap>
         <color attach="background" args={['white']} />
 
         {/* lights */}
