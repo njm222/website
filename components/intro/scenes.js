@@ -1,11 +1,11 @@
 // import x from '../examples/x';
-import FloatingBoxes from '../examples/floatingBoxes';
+import FloatingBoxesScene from '../examples/floatingBoxes';
 
 function Scenes() {
   return (
     <>
       {/* testing */}
-      <FloatingBoxes />
+      <FloatingBoxesScene />
 
       {/* Loading */}
       {/* TitleFocus */}
