@@ -10,7 +10,7 @@ export default function Index() {
         <Intro />
 
         {/* page content */}
-        <Home />
+        {/* <Home /> */}
       </Layout>
     </>
   );
