@@ -6,11 +6,9 @@ import Scenes from './scenes';
 
 function Intro() {
   return (
-    <div className="intro fixed left-0 top-0 right-0 w-screen h-screen z-50">
+    <div className="intro fixed left-0 top-0 right-0 w-screen h-screen TO_DECOMMENT-z-10">
       <Canvas
-        antialias
-        camera={{ position: [0, 0, 15], near: 5, far: 40 }}
-        colorManagement
+        camera={{ position: [0, 0, 15], near: 0.1, far: 100 }}
         gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
         onCreated={({ gl }) => gl.setClearColor('#ffffff')}
         pixelRatio={1}
@@ -19,20 +17,8 @@ function Intro() {
 
         {/* lights */}
         <ambientLight intensity={0.4} />
-        <pointLight position={[20, 20, 20]} />
-        <pointLight position={[-20, -20, -20]} intensity={4} />
-        <directionalLight
-          castShadow
-          position={[2.5, 12, 5]}
-          intensity={4}
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-          shadow-camera-far={50}
-          shadow-camera-left={-10}
-          shadow-camera-right={10}
-          shadow-camera-top={10}
-          shadow-camera-bottom={-10}
-        />
+        {/* <pointLight position={[20, 20, 20]} />
+        <pointLight position={[-20, -20, -20]} intensity={4} /> */}
 
         {/* loading */}
         <Suspense fallback={null}></Suspense>
