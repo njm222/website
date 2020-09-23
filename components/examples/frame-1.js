@@ -1,8 +1,8 @@
 import { Suspense, useRef, useState } from 'react';
 import { useFrame } from 'react-three-fiber';
 import { a, useSpring, useTransition } from '@react-spring/three';
-import { EffectComposer, SSAO, SMAA } from 'react-postprocessing'
-import Shadows from '../utils/shadows'
+import { EffectComposer, SSAO, SMAA } from 'react-postprocessing';
+import Shadows from '../utils/shadows';
 
 const BOXES_ARGS = [
   {
@@ -29,11 +29,10 @@ function Box({ random, started, position, args, opacity, scale, spring }) {
   const mesh = useRef();
   const { rot } = useSpring({
     rot: spring.to([0, 100], [0, Math.PI * 2]),
-  })
+  });
   useFrame((state) => {
-    if (!started) return
-    mesh.current.position.y +=
-      (Math.sin(state.clock.getElapsedTime() * random) * random) / 20;
+    if (!started) return;
+    mesh.current.position.y += (Math.sin(state.clock.getElapsedTime() * random) * random) / 20;
   });
   return (
     <a.mesh ref={mesh} position={position} rotation-x={rot} rotation-y={rot} scale={scale} receiveShadow castShadow>
@@ -45,13 +44,13 @@ function Box({ random, started, position, args, opacity, scale, spring }) {
 
 function FloatingBoxes(props) {
   const group = useRef();
-  const [isEntered, setIsEntered] = useState(0)
+  const [isEntered, setIsEntered] = useState(0);
   const transition = useTransition(BOXES_ARGS, {
     from: { opacity: 0, scale: [0.1, 0.1, 0.1] },
     enter: { opacity: 1, scale: [1, 1, 1] },
     leave: { opacity: 0, scale: [0.1, 0.1, 0.1] },
     trail: 200,
-    onRest: () => setIsEntered(s => s + 1)
+    onRest: () => setIsEntered((s) => s + 1),
   });
   const { x } = useSpring({
     from: { x: 0 },
@@ -59,14 +58,14 @@ function FloatingBoxes(props) {
     config: {
       mass: 10,
       tension: 50,
-      friction: 50
+      friction: 50,
     },
-    pause: isEntered < 3
-  })
+    pause: isEntered < 3,
+  });
   const { posY, rotY } = useSpring({
-    posY: x.to([0, 100], [0, 15]), 
+    posY: x.to([0, 100], [0, 15]),
     rotY: x.to([0, 100], [0, Math.PI * 2]),
-  })
+  });
   return (
     <a.group ref={group} {...props} position-y={posY} rotation-y={rotY}>
       {transition(({ opacity, scale }, data) => (

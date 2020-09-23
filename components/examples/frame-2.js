@@ -6,9 +6,9 @@ import { BlurPass, EffectComposer, KernelSize, RenderPass, Resizable, Resizer } 
 import { HalfFloatType } from 'three';
 
 const FONT_PROPS = {
-  font: "http://fonts.gstatic.com/s/inter/v2/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff",
+  font: 'http://fonts.gstatic.com/s/inter/v2/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff',
   fontSize: 4,
-}
+};
 
 function easeInCubic(x) {
   return x * x * x;
@@ -22,65 +22,58 @@ function useBlur() {
       frameBufferType: HalfFloatType,
     });
     const renderPass = new RenderPass(scene, camera);
-    const blurPass = new BlurPass({ width: size.width, height: size.height, kernelSize: KernelSize.HUGE })
+    const blurPass = new BlurPass({ width: size.width, height: size.height, kernelSize: KernelSize.HUGE });
     composer.addPass(renderPass);
     composer.addPass(blurPass);
     return [composer, blurPass];
-  }, [
-    gl,
-    scene,
-    camera,
-  ]);
+  }, [gl, scene, camera]);
 
-  useEffect(() => void composer.setSize(size.width, size.height), [
-    composer,
-    size,
-  ]);
+  useEffect(() => void composer.setSize(size.width, size.height), [composer, size]);
   useFrame((_, delta) => void composer.render(delta), 1);
   return blurPass;
 }
 
-function Title({ label = "", ...props}) {
-  const group = useRef()
+function Title({ label = '', ...props }) {
+  const group = useRef();
   return (
     <group {...props} ref={group}>
-      <Text name={label} {...FONT_PROPS} material-color="#000" >
+      <Text name={label} {...FONT_PROPS} material-color="#000">
         {label}
       </Text>
     </group>
-  )
+  );
 }
 
 function TextSwapping(props) {
-  const [isEntered, setIsEntered] = useState(false)
-  const blur = useBlur()
+  const [isEntered, setIsEntered] = useState(false);
+  const blur = useBlur();
 
   const updateBlur = useCallback(
     function updateBlur(progress) {
-      blur.scale = progress > 70 ? easeInCubic(((progress - 70) / 30)) : 0
+      blur.scale = progress > 70 ? easeInCubic((progress - 70) / 30) : 0;
     },
     [blur]
-  )
+  );
 
   const [{ x }, animate] = useSpring(() => ({
     x: 0,
     config: {
       mass: 10,
       tension: 50,
-      friction: 100
+      friction: 100,
     },
     onRest: () => setIsEntered(true),
-    onChange: updateBlur
-  }))
+    onChange: updateBlur,
+  }));
   const { posZ } = useSpring({
-    posZ: x.to([0, 100], [-200, 5]), 
-  })
+    posZ: x.to([0, 100], [-200, 5]),
+  });
   useEffect(() => {
-    animate({ cancel: true })
-    animate({ x: isEntered ? 0 : 100 })
-  }, [isEntered])
+    animate({ cancel: true });
+    animate({ x: isEntered ? 0 : 100 });
+  }, [isEntered]);
   return (
-    <a.group {...props} position-z={posZ} >
+    <a.group {...props} position-z={posZ}>
       {isEntered ? <Title label="Open source toolkit for:" /> : <Title label="Poimandres" />}
     </a.group>
   );
