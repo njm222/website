@@ -6,7 +6,7 @@ import { BlurPass, EffectComposer, KernelSize, RenderPass, Resizable, Resizer } 
 import { HalfFloatType } from 'three';
 
 const FONT_PROPS = {
-  font: 'http://fonts.gstatic.com/s/inter/v2/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff',
+  font: 'https://cdn.jsdelivr.net/npm/inter-ui@3.15.0/Inter (web)/Inter-SemiBold.woff',
   fontSize: 4,
 };
 
