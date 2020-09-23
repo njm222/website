@@ -3,13 +3,13 @@ import Frame1 from '../examples/frame-1';
 import Frame2 from '../examples/frame-2';
 import Frame3 from '../examples/frame-3';
 
-function Scenes() {
+function Scenes({ index }) {
   return (
     <>
       {/* testing */}
-      {/* <Frame1 /> */}
-      {/* <Frame2 /> */}
-      <Frame3 />
+      {index === 0 && <Frame1 />}
+      {index === 1 && <Frame2 />}
+      {index === 2 && <Frame3 />}
 
       {/* Loading */}
       {/* TitleFocus */}
