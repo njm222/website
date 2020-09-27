@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useFrame, useThree } from 'react-three-fiber';
 import { a, useSpring } from '@react-spring/three';
-import { Text } from 'drei';
+import { Text } from 'drei/abstractions/Text';
 import { BlurPass, EffectComposer, KernelSize, RenderPass, Resizable, Resizer } from 'postprocessing';
 import { HalfFloatType } from 'three';
 
