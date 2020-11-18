@@ -8,15 +8,15 @@ import Header from './header';
 function Layout({ children, pageTitle, ...props }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{pageTitle}</title>
       </Head>
 
-      <Header />
+      <Header /> */}
 
       <main>{children}</main>
 
-      <Footer />
+      {/* <Footer /> */}
 
       {/* <Cursor /> */}
       {/* <Background /> */}

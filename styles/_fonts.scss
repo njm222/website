@@ -4,7 +4,6 @@
 $font-display: swap;
 $font-family: 'Inter';
 $font-path: 'https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/';
-
 // mixin fonts
 @mixin fontface($weight, $style, $name) {
   @font-face {
