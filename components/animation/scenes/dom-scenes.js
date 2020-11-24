@@ -1,5 +1,5 @@
-import Frame1 from '../examples/frame-1';
-import Frame3 from '../examples/frame-3';
+import Frame1 from '../frames/frame-1';
+import Frame3 from '../frames/frame-3';
 import { useTimeline } from '../store';
 
 function Scenes() {

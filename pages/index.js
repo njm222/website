@@ -1,16 +1,11 @@
 import Layout from '../components/layout';
-import Intro from '../components/intro/intro';
-import Home from '../components/home/home';
+import Intro from '../components/animation/animation';
 
 export default function Index() {
   return (
     <>
       <Layout pageTitle="Poimandres">
-        {/* intro animation */}
         <Intro />
-
-        {/* page content */}
-        {/* <Home /> */}
       </Layout>
     </>
   );

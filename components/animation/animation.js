@@ -4,9 +4,9 @@ import clsx from 'clsx';
 import { Loader } from '@react-three/drei';
 import { a, useSpring } from '@react-spring/web';
 
-import Scenes from './three-scenes';
-import DomScenes from './dom-scenes';
-import { useInverseBlending, useTimeline } from '../store';
+import Scenes from './scenes/three-scenes';
+import DomScenes from './scenes/dom-scenes';
+import { useInverseBlending, useTimeline } from './store';
 
 function Intro() {
   const { isThreeFrame, increaseStep } = useTimeline((s) => s);
