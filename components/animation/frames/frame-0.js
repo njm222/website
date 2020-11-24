@@ -33,7 +33,7 @@ function Box({ random, started, position, args, opacity, scale, spring }) {
   });
   useFrame((state) => {
     if (!(started && mesh.current)) return;
-    mesh.current.position.y += (Math.sin(state.clock.getElapsedTime() * random) * random) / 20;
+    mesh.current.position.y += (state.clock.getElapsedTime() * random) / 10000;
   });
   return (
     <a.mesh ref={mesh} position={position} rotation-x={rot} rotation-y={rot} scale={scale} receiveShadow castShadow>
@@ -66,7 +66,7 @@ function FloatingBoxes(props) {
     onRest: increaseStep,
   });
   const { posY, rotY } = useSpring({
-    posY: x.to([0, 100], [0, 15]),
+    posY: x.to([0, 100], [0, 10]),
     rotY: x.to([0, 100], [0, Math.PI * 2]),
   });
   return (
