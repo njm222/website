@@ -33,7 +33,7 @@ function Text({ parentAnimation }) {
             parentAnimation();
           }
         }
-      }, index * 1000)
+      }, index * 400)
     );
   }, [setTextIndex, parentAnimation]);
 
@@ -55,11 +55,11 @@ export default function Frame3() {
       }),
         await animate({
           to: { x: -1, color: '#999' },
-          delay: 1000,
+          delay: 10,
           onRest: () => setEnded(true),
         });
     },
-    delay: 1000,
+    delay: 10,
     config: {
       friction: 50,
     },

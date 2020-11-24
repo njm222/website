@@ -237,7 +237,7 @@ function Frame4() {
       posY: 20,
       posZ: 0,
     },
-    delay: 6000,
+    delay: 1000,
     onChange: () => cameraRef.current.lookAt(0, 0, 0),
   });
 
@@ -250,26 +250,26 @@ function Frame4() {
         boxRefs.forEach(
           async (boxRef, index) => await boxRef.current.start({ config: config.molasses, ...BOXES_ANIMATION[1][index] })
         ),
-      3000
+      1000
     );
     setTimeout(() => {
       boxRefs.forEach(
         async (boxRef, index) => await boxRef.current.start({ config: config.molasses, ...BOXES_ANIMATION[2][index] })
       );
       setText('reusable');
-    }, 6000);
+    }, 2000);
     setTimeout(() => {
       boxRefs.forEach(
         async (boxRef, index) => await boxRef.current.start({ config: config.molasses, ...BOXES_ANIMATION[3][index] })
       );
       setText('React');
-    }, 9000);
+    }, 3000);
     setTimeout(() => {
       boxRefs.forEach(
         async (boxRef, index) => await boxRef.current.start({ config: config.molasses, ...BOXES_ANIMATION[4][index] })
       );
       setText('components');
-    }, 12000);
+    }, 4000);
   }, [boxRefs]);
 
   useEffect(() => setInverse(false), [setInverse]);

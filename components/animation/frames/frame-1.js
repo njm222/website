@@ -34,7 +34,7 @@ function Frame1() {
     <div className="absolute inset-0 flex justify-center items-center bg-c000 text-2xl">
       <a.div
         style={{
-          scale: x.to((x) => 1 + x),
+          scale: x.to((x) => 1),
           textShadow: x.to((x) => {
             const shadow = x > 0.5 ? (x - 0.5) * 200 : 0;
             const color = x > 0.5 ? (255 * (x - 0.5)) / 0.5 : 0;

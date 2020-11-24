@@ -63,7 +63,7 @@ function FloatingBoxes(props) {
     onRest: increaseStep,
   });
   const { posY, rotY } = useSpring({
-    posY: x.to([0, 100], [15, 0]),
+    posY: x.to([0, 100], [10, 0]),
     rotY: x.to([0, 100], [Math.PI * 2, 0]),
   });
   return (
